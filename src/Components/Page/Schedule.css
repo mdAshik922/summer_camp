@@ -1,0 +1,8 @@
+.data{
+    background-color: black;
+    color: blanchedalmond;
+    border: 2px solid blueviolet;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10px 30px 10px 10px;
+}

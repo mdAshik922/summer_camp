@@ -1,0 +1,24 @@
+.container{
+    background-color: rgba(185, 185, 253, 0.837);
+}
+.App {
+    font-family: sans-serif;
+    /* text-align: center; */
+   
+    height: 100vh;
+  }
+  .image-item {
+    display: flex;
+    margin: 10px 0;
+  }
+  .image-item__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  .image-button {
+    margin: 10px;
+    height: 40px;
+    border-radius: 25px;
+    background-color: coral;
+  }
