@@ -19,7 +19,7 @@ Summer school is usually a part of the academic curriculum for a student to make
 
 
 
-In the project directory, you can run:
+
 
 ### `yarn start`
 
