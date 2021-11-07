@@ -50,9 +50,12 @@ const handelCancel = id=>{
 
     return (
         <div>
+          <h2 style={{color: 'green'}}><u>Order Details</u></h2>
         {
                 camps.map(camp => <div key={camp._id}>
 <h2>{camp.name}</h2>
+<h2>{camp.email}</h2>
+<h6>{camp.address}</h6>
 
 <button onClick={()=> handelCancel(camp._id)}>Delete</button>
                 </div>)

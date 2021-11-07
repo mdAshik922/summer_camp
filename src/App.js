@@ -33,17 +33,17 @@ function App() {
 
 <PrivetRoute  path="/team"><Team></Team></PrivetRoute>
 
-<PrivetRoute  path="/schedule"><Schedule></Schedule></PrivetRoute>
+<Route  path="/schedule"><Schedule></Schedule></Route>
 
 <Route  path="/gallery"><Gallery></Gallery></Route>
 
-<Route  path="/contact"><Contact></Contact></Route>
+<PrivetRoute  path="/contact"><Contact></Contact></PrivetRoute>
 
-<Route  path="/manage"><Manage></Manage></Route>
+<PrivetRoute  path="/manage"><Manage></Manage></PrivetRoute>
 
 <Route  path="/privacy"><TermPrivacy></TermPrivacy></Route>
 
-<Route  path="/schedule/detail/:id"><Detail></Detail></Route>
+<PrivetRoute  path="/detail/:id"><Detail></Detail></PrivetRoute>
 
 <Route  path="/login"><Login></Login></Route>
 

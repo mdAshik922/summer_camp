@@ -86,7 +86,7 @@ const Contact = () => {
   </Row>
   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
     <Form.Label>Example textarea</Form.Label>
-    <Form.Control {...register("description")} as="textarea" rows={3} />
+    <Form.Control {...register("description")} placeholder="your order details" as="textarea" rows={3} />
   </Form.Group>
 
   <Form.Group className="mb-3" id="formGridCheckbox">

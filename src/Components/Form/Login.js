@@ -73,6 +73,10 @@ const handelLogin=(e)=>{
     <br/>
     <p>By creating an account you agree to our <Link to="/privacy">Terms & Privacy</Link>.</p>
 
+<br/>
+<br/>
+<p> Create an account? <Link to="/register">Sign-up</Link>.</p>
+
     <button type="submit" className="registerbtn">Login</button>
   </div>
   

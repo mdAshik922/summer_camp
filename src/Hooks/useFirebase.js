@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { getAuth,  signInWithPopup, signInWithEmailAndPassword , createUserWithEmailAndPassword ,  onAuthStateChanged, GoogleAuthProvider, signOut } from "firebase/auth";
+import { getAuth,  signInWithPopup, signInWithEmailAndPassword , updateProfile, createUserWithEmailAndPassword ,  onAuthStateChanged, GoogleAuthProvider, signOut } from "firebase/auth";
 import initilazition from '../Firebase/Firebase.init';
 
 initilazition();
@@ -34,14 +34,33 @@ const logout = () =>{
   })
 }
 
+const updateName= (name)=> {
+  updateProfile(auth.currentUser, {
+    displayName: name
+  }).then(() => {
+    const newUser={...user, displayName: name} // recommend
+   setUser(newUser)
+    
+    // ...
+  }).catch((error) => {
+    // An error occurred
+    // ...
+  });
+};
+
 useEffect(() =>{
-  onAuthStateChanged(auth, user=>{
+  const unsubscribe = onAuthStateChanged(auth , (user)=> {
+     // console.log(user);
        if(user){
-       console.log('inside state change', user);
-     setUser(user);
-  }
-})
-}, []);
+            
+           setUser(user)
+       } else{
+           setUser({})
+       }
+       setIsLoding(false)
+  })
+   return ()=> unsubscribe()
+},[]);
 
   return{
       user,
@@ -52,6 +71,7 @@ useEffect(() =>{
       isLoding,
       singinWithGoogle,
       signUp,
+      updateName,
       signIn,
 logout
   }

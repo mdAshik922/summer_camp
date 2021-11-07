@@ -18,6 +18,10 @@ const Detail = () => {
             
             <p>{id}</p>
             <h3> {user.name}</h3>
+
+            <img src={user.picture} alt="fun"/>
+
+            <h6>{user.description}</h6>
         </div>
     );
 };

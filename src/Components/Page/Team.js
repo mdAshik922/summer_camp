@@ -3,7 +3,7 @@ import React from 'react';
 const Team = () => {
     return (
         <div>
-            <h2>my tem</h2> m
+            <h2>my team</h2> 
         </div>
     );
 };

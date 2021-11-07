@@ -4,13 +4,22 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 import boy from './image/camp-boy.png';
 import Fade from 'react-reveal/Fade';
+import firstOrder from './image/first-order.png';
+import secondOrder from './image/second-order (2).png';
+import thirdOrder from './image/third-order.png';
 const Home = () => {
 
     return (
         <div>
             <div><img width="50%" src={summer} alt="summer"/>
-          <Link to="/register"> <button style={{fontSize: '3rem', fontWeight: 'bolder', width: '10%', backgroundColor: 'tomato', borderRadius: '30px'}}>Join Now!</button></Link>
+            
+          <Link to="/register"> <button style={{fontSize: '3rem',
+           fontWeight: 'bolder', maxWidth: '25%',
+           backgroundColor: 'tomato', borderRadius: '30px'}}
+           >Join Now!</button>
+           </Link>
             </div>
+
             <h1 className="summer" >Summer adventures for curious, creative kids</h1>
             <p className="summer-somthing"><strong>Join whimsical, interactive classes for kids ages 5-15
                  in arts & crafts, theater, STEM, movement, theater, mindfulness and beyond</strong></p>
@@ -26,8 +35,21 @@ const Home = () => {
      <h6>will explore themes through hands-on projects and daily activities.</h6>
      <h6>Our all-day camp features healthy meals and snacks.</h6>
      <h6>Plus, campers receive a camp backpack, T-shirt, and baseball cap for summer adventures!</h6>
-     <div>  <img style={{marginLeft: '90%'}} src={boy} alt=""/></div>
+     <div>  <img style={{marginLeft: '90%',  maxWidth:' 70%',  height: 'auto'}} src={boy} alt=""/></div>
        </div>
+     </div>
+<br/>
+<br/>
+<br/>
+
+     <div>
+             <h3 style={{color:'green', fontWeight: 'bolder'}}><u>please click any one</u></h3>
+       <Link to="/contact"><img src={firstOrder} alt="order"/></Link>
+       <h4>Food-Order</h4>
+       <Link to="/contact"><img style={{marginLeft: '2px', marginRight: '2px'}} src={secondOrder} alt="order"/></Link>
+       <h4>Art-order</h4>
+       <Link to="/contact"><img src={thirdOrder} alt="order"/></Link>
+       <h4>Farmer</h4>
      </div>
        
         </div>

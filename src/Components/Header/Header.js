@@ -17,17 +17,19 @@ const Header = () => {
   <Navbar.Collapse id="responsive-navbar-nav">
 
     <Nav className="me-auto " style={{marginLeft: '30%'}}>
-      <Nav.Link as={NavLink} to="/home#home">Home</Nav.Link>
-      <Nav.Link as={NavLink} to="/about#about">About</Nav.Link>
-      <Nav.Link as={NavLink} to="/team#team">Team</Nav.Link>
-      <Nav.Link as={NavLink} to="/schedule#schedule">Schedule</Nav.Link>
-      <Nav.Link as={NavLink} to="/gallery#gallery">Gallery</Nav.Link>
-      <Nav.Link as={NavLink} to="/contact#contact">Contact</Nav.Link>
+      <Nav.Link as={NavLink} to="/home">Home</Nav.Link>
+      <Nav.Link as={NavLink} to="/about">About</Nav.Link>
+      <Nav.Link as={NavLink} to="/team">Team</Nav.Link>
+      <Nav.Link as={NavLink} to="/schedule">Schedule</Nav.Link>
+      <Nav.Link as={NavLink} to="/gallery">Gallery</Nav.Link>
+      <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
       <Nav.Link as={NavLink} to="/manage#manage">Manage</Nav.Link>
      
       { user.displayName?
-               <button onClick={logout} style={{color: 'yellow', backgroundColor: 'green'}}>Log Out</button>
-               : 
+      
+              <button onClick={logout} style={{color: 'yellow', backgroundColor: 'green'}}>Log Out</button>
+              
+              : 
                <Nav.Link as={NavLink} style={{color: 'white'}} to="/login">Login</Nav.Link>
           }
     </Nav>
@@ -38,7 +40,7 @@ const Header = () => {
       
        <div style={{border: '1px solid white'}}>
        <img style={{borderRadius: '50px', width: '35px'}} src={user.photoURL} alt=""/>
-        <p style={{marginRight: '5px'}}><strong>{user.displayName} </strong></p>
+        <p style={{marginRight: '5px', color: 'white'}}><strong>{user.displayName} </strong></p>
        </div>
       </Navbar.Text>
     </Nav>
