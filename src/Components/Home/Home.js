@@ -7,6 +7,8 @@ import Fade from 'react-reveal/Fade';
 import firstOrder from './image/first-order.png';
 import secondOrder from './image/second-order (2).png';
 import thirdOrder from './image/third-order.png';
+import Activity from '../Page/Activity/Activity';
+import HomeSeduil from '../Page/HomeSeduile/HomeSeduil';
 const Home = () => {
 
     return (
@@ -41,6 +43,9 @@ const Home = () => {
 <br/>
 <br/>
 <br/>
+<div>
+<HomeSeduil></HomeSeduil>
+</div>
 
      <div>
              <h3 style={{color:'green', fontWeight: 'bolder'}}><u>please click any one</u></h3>
@@ -50,6 +55,10 @@ const Home = () => {
        <h4>Art-order</h4>
        <Link to="/contact"><img src={thirdOrder} alt="order"/></Link>
        <h4>Farmer</h4>
+     </div>
+
+     <div>
+       <Activity></Activity>
      </div>
        
         </div>

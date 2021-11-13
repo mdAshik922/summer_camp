@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import OrderFrom from '../Form/OrderFrom';
 
 //Show spacific detail data
 const Detail = () => {
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState({});
     const {id} = useParams();
 
     useEffect(() => {
@@ -22,6 +23,7 @@ const Detail = () => {
             <img src={user.picture} alt="fun"/>
 
             <h6>{user.description}</h6>
+            <OrderFrom></OrderFrom>
         </div>
     );
 };

@@ -16,18 +16,22 @@ const Header = () => {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
 
-    <Nav className="me-auto " style={{marginLeft: '30%'}}>
+    <Nav className="me-auto " style={{marginLeft: '10%'}}>
       <Nav.Link as={NavLink} to="/home">Home</Nav.Link>
       <Nav.Link as={NavLink} to="/about">About</Nav.Link>
       <Nav.Link as={NavLink} to="/team">Team</Nav.Link>
       <Nav.Link as={NavLink} to="/schedule">Schedule</Nav.Link>
       <Nav.Link as={NavLink} to="/gallery">Gallery</Nav.Link>
       <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
-      <Nav.Link as={NavLink} to="/manage#manage">Manage</Nav.Link>
+ 
      
       { user.displayName?
       
+             <>
+                   <Nav.Link as={NavLink} to="/order">Order</Nav.Link>
+      <Nav.Link as={NavLink} to="/manage#manage">Manage</Nav.Link>
               <button onClick={logout} style={{color: 'yellow', backgroundColor: 'green'}}>Log Out</button>
+             </>
               
               : 
                <Nav.Link as={NavLink} style={{color: 'white'}} to="/login">Login</Nav.Link>

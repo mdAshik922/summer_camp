@@ -17,6 +17,7 @@ import Footer from './Components/Page/Footer';
 import PrivetRoute from './Components/PrivetRoute/PrivetRoute';
 import Manage from './Components/Manage/Manage';
 import Detail from './Components/Page/Detail';
+import Oreder from './Components/Page/Order/Oreder';
 
 function App() {
   return (
@@ -40,6 +41,8 @@ function App() {
 <PrivetRoute  path="/contact"><Contact></Contact></PrivetRoute>
 
 <PrivetRoute  path="/manage"><Manage></Manage></PrivetRoute>
+
+<PrivetRoute  path="/order"><Oreder></Oreder></PrivetRoute>
 
 <Route  path="/privacy"><TermPrivacy></TermPrivacy></Route>
 
