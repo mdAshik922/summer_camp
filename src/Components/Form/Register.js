@@ -1,71 +1,68 @@
 import React, { useState } from 'react';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
-import './Regi.css';
+import './Register.css';
 const Register = () => {
-    const [name , setName] =useState('')
-    const [email,setEmail]=useState('')
-    const [password,setPassword]=useState('')
+    const [ name , setName ] = useState('');
+    const [ email,setEmail ]= useState('');
+    const [ password,setPassword]  = useState('');
 
   
-    const history= useHistory()
-    const location = useLocation()
-    const url= location.state?.from || "/home"
+    const navigate= useNavigate();
+    const location = useLocation();
+    const url= location.state?.from || "/home";
 
-    const {singinWithGoogle, signUp, setError, setIsLoding,  setUser}=useAuth();
+    const { singinWithGoogle, signUp, setError, setIsLoading,  setUser } = useAuth();
 
-    const hendelName = (e) =>{
-        console.log(e.target.value);
-   setName(e.target.value)
-    }
-    const hendelEmail = (e) =>{
-        console.log(e.target.value);
-        setEmail(e.target.value)
-    }
-    const hendelPasswords = (e) =>{
-        console.log(e.target.value);
-        setPassword(e.target.value)
-    }
-    const hendelPassword = (e) =>{
-        console.log(e.target.value);
-        setPassword(e.target.value)
-    }
+    const handelName = (e) =>{
+   setName(e.target.value);
+    };
+    const handelEmail = (e) =>{    
+        setEmail(e.target.value);
+    };
+    const handelPasswords = (e) =>{
+        setPassword(e.target.value);
+    };
+    const handelPassword = (e) =>{
+        setPassword(e.target.value);
+    };
 
     const handelRegister = e =>{
         signUp(email, password)
         .then((res) => {
-            setIsLoding(true)
+            setIsLoading(true);
             // updateName(name)
-              setUser(res.user)
-              history.push(url)
+              setUser(res.user);
+              navigate.push(url);
             })
             .catch((error) => {
-              const errorCode = error.code;
-              const errorMessage = error.message;
+             
+              setError(error.message);
               // ..
             })
             .finally(()=> {
-                setIsLoding(false)
-            })
+                setIsLoading(false);
+            });
         e.preventDefault();
 
-    }
+    };
 
 
     const handleGoogleLogin = () => {
         singinWithGoogle()
           .then((res) => 
             {
-                setIsLoding(true)
-              setUser(res.user)
-              history.push(url)
+                setIsLoading(true);
+              setUser(res.user);
+              navigate.push(url);
             }
               )
           .catch((err) => console.log(err))
           .finally(() => {
-            setIsLoding(false)
+            setIsLoading(false);
           })
       };
+
     return (
         <div>
             <div>
@@ -76,16 +73,16 @@ const Register = () => {
    <br/>
 
     <label htmlFor="name"><b>Name</b></label>
-    <input type="text" onBlur={hendelName} placeholder="Enter full name" name="name" id="name" required/>
+    <input type="text" onBlur={handelName} placeholder="Enter full name" name="name" id="name" required/>
     <br/>
     <label htmlFor="email"><b>Email</b></label>
-    <input type="text" onBlur={hendelEmail} placeholder="Enter Email" name="email" id="email" required/>
+    <input type="text" onBlur={handelEmail} placeholder="Enter Email" name="email" id="email" required/>
 
     <label htmlFor="psw"><b>Password</b></label>
-    <input type="password" onBlur={hendelPasswords} placeholder="Enter Password" name="psw" id="psw" required/>
+    <input type="password" onBlur={handelPasswords} placeholder="Enter Password" name="psw" id="psw" required/>
 
     <label htmlFor="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" onBlur={hendelPassword} placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required/>
+    <input type="password" onBlur={handelPassword} placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required/>
     <br/>
     <p>By creating an account you agree to our <Link to="/privacy">Terms & Privacy</Link>.</p>
 
@@ -93,7 +90,7 @@ const Register = () => {
   </div>
   
 </form>
-<button onClick={handleGoogleLogin}>Google signin</button>
+<button onClick={handleGoogleLogin}>Google sign in</button>
 
 <div className="container signin">
     <p>Already have an account? <Link to="/login">Sign in</Link>.</p>

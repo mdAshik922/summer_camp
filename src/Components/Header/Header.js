@@ -10,9 +10,9 @@ const Header = () => {
 
     return (
         <div>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" style={{backgroundColor: "#1abc9c"}}>
  
-  <Navbar.Brand style={{color: 'yellowgreen', fontSize: 'xx-large'}}> <img style={{width: '50px', marginLeft: '20px'}} src={header} alt="header-img"/> Capm</Navbar.Brand>
+  <Navbar.Brand style={{color: "yellowgreen", fontSize: 'xx-large'}}> <img style={{width: '50px', marginLeft: '20px'}} src={header} alt="header-img"/> Camp</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
 
@@ -42,7 +42,7 @@ const Header = () => {
     <Navbar.Text>
       {/* show user photo and name */}
       
-       <div style={{border: '1px solid white'}}>
+       <div >
        <img style={{borderRadius: '50px', width: '35px'}} src={user.photoURL} alt=""/>
         <p style={{marginRight: '5px', color: 'white'}}><strong>{user.displayName} </strong></p>
        </div>

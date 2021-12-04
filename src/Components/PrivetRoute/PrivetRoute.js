@@ -1,28 +1,16 @@
 import React from 'react';
-import { Redirect, Route } from 'react-router-dom';
+import { Spinner } from 'react-bootstrap';
+import { useLocation, Navigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 const PrivetRoute = ({children, ...rest}) => {
-    const {user , isLoding}= useAuth()
+    let location = useLocation();
+    const { user,  isLoading } = useAuth();
+    if (isLoading) { return <Spinner /> };
+    if(user.email){
+        return children;
+    };
 
-    if(isLoding) {
-        return "loading"
-    }
-    return (
-        <div>
-                 <Route
-            {...rest}
-            
-            render={({ location }) => user.displayName ? children : <Redirect
-                to={{
-                    pathname: "/login",
-                    state: { from: location }
-                }}
-            ></Redirect>}
-        >
-
-        </Route>
-        </div>
-    );
+    return <Navigate to="/login" state={{from: location}} />
 };
 
 export default PrivetRoute;

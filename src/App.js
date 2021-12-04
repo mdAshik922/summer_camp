@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter as Router, Route, Switch  } from 'react-router-dom';
+import { BrowserRouter, Route, Routes  } from 'react-router-dom';
 import AuthProvider from './Components/Context/AuthProvider';
 import Home from './Components/Home/Home';
 import Register from './Components/Form/Register';
@@ -8,7 +8,7 @@ import Login from './Components/Form/Login';
 import TermPrivacy from './Components/Terms&Privacy/TermPrivacy';
 import Header from './Components/Header/Header';
 import Contact from './Components/Page/Contact';
-import Notfount from './Components/Page/Notfount';
+import NotFount from './Components/Page/NotFount';
 import Schedule from './Components/Page/Schedule';
 import Team from './Components/Page/Team';
 import About from './Components/Page/About';
@@ -17,46 +17,46 @@ import Footer from './Components/Page/Footer';
 import PrivetRoute from './Components/PrivetRoute/PrivetRoute';
 import Manage from './Components/Manage/Manage';
 import Detail from './Components/Page/Detail';
-import Oreder from './Components/Page/Order/Oreder';
+import Order from './Components/Page/Order/Order';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
-    <Router>
+    <BrowserRouter>
       <Header></Header>
-      <Switch>
-<Route exact path="/"><Home></Home></Route>
+      <Routes>
+<Route exact path="/" element={<Home></Home>} />
 
-<Route  path="/home"><Home></Home></Route>
+<Route  path="/home" element={<Home></Home>}/>
 
-<PrivetRoute  path="/about"><About></About></PrivetRoute>
+<Route  path="/about" element={<PrivetRoute><About></About></PrivetRoute>}/>
 
-<PrivetRoute  path="/team"><Team></Team></PrivetRoute>
+<Route  path="/team" element={<PrivetRoute><Team></Team></PrivetRoute>}/>
 
-<Route  path="/schedule"><Schedule></Schedule></Route>
+<Route  path="/schedule" element={<Schedule></Schedule>} />
 
-<Route  path="/gallery"><Gallery></Gallery></Route>
+<Route  path="/gallery" element={<Gallery></Gallery>} />
 
-<PrivetRoute  path="/contact"><Contact></Contact></PrivetRoute>
+<Route  path="/contact" element={<PrivetRoute><Contact></Contact></PrivetRoute>}/>
 
-<PrivetRoute  path="/manage"><Manage></Manage></PrivetRoute>
+<Route  path="/manage" element={<PrivetRoute><Manage></Manage></PrivetRoute>}/>
 
-<PrivetRoute  path="/order"><Oreder></Oreder></PrivetRoute>
+<Route  path="/order" element={<PrivetRoute><Order></Order></PrivetRoute>}/> 
 
-<Route  path="/privacy"><TermPrivacy></TermPrivacy></Route>
+<Route  path="/privacy" element={<TermPrivacy></TermPrivacy>} />
 
-<PrivetRoute  path="/detail/:id"><Detail></Detail></PrivetRoute>
+<Route  path="/detail/:id" element={<PrivetRoute><Detail></Detail></PrivetRoute>} />
 
-<Route  path="/login"><Login></Login></Route>
+<Route  path="/login" element={<Login></Login>} />
 
-<Route  path="/register"><Register></Register></Route>
+<Route  path="/register" element={<Register></Register>}/>
 
-<Route path="*"><Notfount></Notfount></Route>
+<Route path="*" element={<NotFount></NotFount>}/>
 
-      </Switch> 
+      </Routes> 
    <Footer></Footer>
-   </Router>
+   </BrowserRouter>
     </AuthProvider>
     </div>
   );

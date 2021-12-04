@@ -8,7 +8,7 @@ import firstOrder from './image/first-order.png';
 import secondOrder from './image/second-order (2).png';
 import thirdOrder from './image/third-order.png';
 import Activity from '../Page/Activity/Activity';
-import HomeSeduil from '../Page/HomeSeduile/HomeSeduil';
+import HomeSchedule from '../Page/HomeSchedule/HomeSchedule';
 const Home = () => {
 
     return (
@@ -44,7 +44,7 @@ const Home = () => {
 <br/>
 <br/>
 <div>
-<HomeSeduil></HomeSeduil>
+<HomeSchedule></HomeSchedule>
 </div>
 
      <div>

@@ -25,7 +25,7 @@ const Footer = () => {
  <Link to="/contact">Contact</Link>
  </p>
  
- <p className="footer-company-name">Summer Camp &copy; 2021</p>
+
  </div>
  
  <div className="footer-center">
@@ -36,7 +36,7 @@ const Footer = () => {
  </div>
  
  <div>
- <i className="fa fa-phone"></i>
+ <i className="fas fa-phone-alt"></i>
  <p>+1 555 123456</p>
  </div>
  
@@ -64,10 +64,13 @@ const Footer = () => {
  
  </div>
  
+
  </div>
- 
+ <p style={{ marginLeft: "40%", color: "red"}} className="footer-company-name">Summer Camp &copy; 2021</p>
  </footer>
             </div>
+         
+
         </div>
     );
 };

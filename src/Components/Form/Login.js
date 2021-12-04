@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router';
+import { useNavigate, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import './Login.css';
 
 const Login = () => {
-const {singinWithGoogle, signIn, setIsLoding, setUser} = useAuth();
-const history= useHistory()
+const {singinWithGoogle, signIn, setIsLoading, setUser} = useAuth();
+const navigate= useNavigate()
 const location = useLocation()
 
 const url= location.state?.from || "/home"
@@ -27,9 +27,9 @@ const handelLogin=(e)=>{
 
     signIn(email,password)
     .then((res) => {
-        setIsLoding(true)
+      setIsLoading(true)
         setUser(res.user);
-        history.push(url)
+        navigate.push(url)
         // ...
       })
       .catch((error) => {
@@ -37,7 +37,7 @@ const handelLogin=(e)=>{
         const errorMessage = error.message;
       })
       .finally(() => {
-        setIsLoding(false)
+        setIsLoading(false)
       })
 }
 
@@ -45,14 +45,14 @@ const handelLogin=(e)=>{
     singinWithGoogle()
       .then((res) => 
         {
-            setIsLoding(true)
+          setIsLoading(true)
           setUser(res.user)
-          history.push(url)
+          navigate.push(url)
         }
           )
       .catch((err) => console.log(err))
       .finally(() => {
-        setIsLoding(false)
+        setIsLoading(false)
       })
   };
     return (

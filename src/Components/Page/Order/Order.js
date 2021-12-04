@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
-const Oreder = () => {
-    const [orders, setOrders] = useState([]);
+const Order = () => {
+    const [ orders, setOrders ] = useState([]);
     useEffect(()=>{
         fetch('https://shielded-eyrie-93201.herokuapp.com/order')
         .then(res => res.json())
         .then(data => setOrders(data))
     },[]);
 
-
     const handelCancel = id=>{
-        // console.log(id);
+       
         const url = `https://shielded-eyrie-93201.herokuapp.com/order/${id}`;
         fetch(url, {
             method: 'DELETE',
@@ -21,10 +20,10 @@ const Oreder = () => {
         .then(res => res.json())
         .then(data =>{
             if(data.deletedCount){
-                alert('are you suere delete your order!');
+                alert('are you sure delete your order!');
             }
-            const remaning = orders.filter(order => orders._id !== id);
-            setOrders(remaning);
+            const remaining = orders.filter(order => orders._id !== id);
+            setOrders(remaining);
         })
         
         }
@@ -44,4 +43,4 @@ const Oreder = () => {
     );
 };
 
-export default Oreder;
+export default Order;
