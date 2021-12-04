@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
  import './Schedule.css';
+
 const Schedule = () => {
+
     const [camp, setCamp] = useState([]);
     useEffect(()=>{
         fetch('https://shielded-eyrie-93201.herokuapp.com/capming')
@@ -12,7 +15,14 @@ const Schedule = () => {
 
     return (
         <div>
-            {
+            {!camp ? (
+        <div className="text-center my-5 private-spinner py-5">
+          <Spinner variant="danger" animation="border" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </Spinner>
+          <h6>Loading...</h6>
+        </div>
+      ) : (
                 camp.map(camp => <div className="data" key={camp._id}>
                <img src={camp.picture} alt=""/>
                <h2> {camp.name}</h2>
@@ -26,7 +36,7 @@ const Schedule = () => {
               </Link>
 
                 </div>)
-            }
+            )}
 
 
          
