@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import { getAuth,  signInWithPopup, signInWithEmailAndPassword , updateProfile, createUserWithEmailAndPassword ,  onAuthStateChanged, GoogleAuthProvider, signOut } from "firebase/auth";
+import { getAuth,  signInWithPopup, FacebookAuthProvider ,  updateProfile,  onAuthStateChanged, GoogleAuthProvider, signOut } from "firebase/auth";
 import initilazition from '../Firebase/Firebase.init';
 
 initilazition();
@@ -12,22 +12,29 @@ const useFirebase = () => {
   const auth = getAuth();
 
 const googleProvider = new GoogleAuthProvider();
+const facebookProvider = new FacebookAuthProvider();
 
   const singinWithGoogle = ()=>{
  return signInWithPopup(auth, googleProvider);
  
   };
 
-  const signUp = (email, password) =>{
-   return createUserWithEmailAndPassword(auth, email, password);
-   
+  const signInFacebook = (location, navigate) => {
+    setIsLoading(true);
+    signInWithPopup(auth, facebookProvider)
+        .then((result) => {
+            const user = result.user;
+            saveUser(user.email, user.displayName, 'PUT');
+            setError('');
+            const destination = location?.state?.from || '/';
+            navigate(destination);
+        }).catch((error) => {
+            setError(error.message);
+        }).finally(() => setIsLoading(false));
   };
 
 
-  const signIn = (email, password) =>{
-   return signInWithEmailAndPassword(auth, email, password);
-   
-  };
+ 
 
   useEffect(() => {
     fetch(`http://localhost:5000/users/${user.email}`)
@@ -69,18 +76,32 @@ useEffect(() =>{
    return ()=> unsubscribe()
 },[auth]);
 
+
+const saveUser = (email, displayName, method) =>{
+  const user = {email, displayName};
+  fetch('http://localhost:5000/users', {
+    method: method,
+    headers: {
+      'content-type' : 'application/json'
+    },
+    body: JSON.stringify(user)
+  })
+.then()
+};
+
   return{
       user,
+      auth,
       setUser,
+      saveUser,
       admin,
       error,
       setError,
       setIsLoading,
       isLoading,
       singinWithGoogle,
-      signUp,
+      signInFacebook,
       updateName,
-      signIn,
 logout
   }
 };
