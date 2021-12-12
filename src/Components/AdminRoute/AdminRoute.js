@@ -7,7 +7,7 @@ const AdminRoute  = ({children, ...rest}) => {
     let location = useLocation();
     const { user, admin,  isLoading } = useAuth();
     if (isLoading) { return <Spinner /> };
-    if(user.email || user.displayName && admin){
+    if((user.email || user.displayName) && admin){
         return children;
     };
 
