@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import OrderFrom from '../Form/OrderFrom';
 
-//Show spacific detail data
+//Show specific detail data
 const Detail = () => {
     const [user, setUser] = useState({});
     const {id} = useParams();
@@ -12,7 +12,7 @@ const Detail = () => {
         fetch(uri)
         .then(res=>res.json())
         .then(data=>setUser(data))
-    },[]);
+    },[id]);
 
     return (
         <div>

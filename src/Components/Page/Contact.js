@@ -1,9 +1,7 @@
 import Button from '@restart/ui/esm/Button';
 import axios from 'axios';
 import React from 'react';
-
 import { Col, Form, Row } from 'react-bootstrap';
-
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import './contact.css';
@@ -17,7 +15,6 @@ const Contact = () => {
  
    const onChange = (imageList, addUpdateIndex) => {
      // data for submit
-     console.log(imageList, addUpdateIndex);
      setImages(imageList);
    };
  
@@ -28,12 +25,12 @@ const Contact = () => {
 
         .then(res =>{
           if(data.insertedId){
-            alert('succes add user')
+            alert('success add user');
                reset();
-             
-                        }
-                    })
-    }
+                        };
+                    });
+    };
+
     return (
         <div className="container">
            <h1 style={{fontWeight: 'bolder', fontSize: '3rem'}}>CONTACT US</h1>
@@ -48,7 +45,7 @@ const Contact = () => {
            <h6>Duluth, GA 30096</h6>
 
            <div style={{width: '40%', marginLeft: 'auto', marginRight: 'auto', alingItem: 'center', justifyContent: "center"}}>
-{/* contact form */}
+
 <Form  onSubmit={handleSubmit(onSubmit)}>
   <Row className="mb-3">
     <Form.Group as={Col} controlId="formGridName">
@@ -98,8 +95,7 @@ const Contact = () => {
   </Button>
 </Form>
            </div>
-           {/* Uploding image */}
-
+          
            <div className="App">
   <ImageUploading
         multiple

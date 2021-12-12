@@ -9,7 +9,7 @@ const Footer = () => {
  
  <div className="footer-left">
  
- <h3>Summrer<span>Camp</span></h3>
+ <h3>Summer<span>Camp</span></h3>
  
  <p className="footer-links">
  <Link to="/home">Home</Link>

@@ -13,7 +13,7 @@ const Manage = () => {
   },[]);
 
 const handelCancel = id=>{
-   // console.log(id);
+ 
    const url = `https://shielded-eyrie-93201.herokuapp.com/user/${id}`;
    fetch(url, {
        method: 'DELETE',
@@ -41,10 +41,10 @@ const handelCancel = id=>{
               swal("Your imaginary file is safe!");
             }
           });
-           const remaning = camps.filter(service => camps._id !== id);
-           setCamps(remaning);
+           const remaining = camps.filter(service => camps._id !== id);
+           setCamps(remaining);
           }
-   //  console.log(data);
+   
    } );
 }
 
@@ -53,9 +53,9 @@ const handelCancel = id=>{
           <h2 style={{color: 'green'}}><u>Order Details</u></h2>
         {
                 camps.map(camp => <div key={camp._id}>
-<h2>{camp.name}</h2>
-<h2>{camp.email}</h2>
-<h6>{camp.address}</h6>
+<h4>{camp.name}: {camp.email}</h4>
+
+<p>{camp.address}</p>
 
 <button onClick={()=> handelCancel(camp._id)}>Delete</button>
                 </div>)

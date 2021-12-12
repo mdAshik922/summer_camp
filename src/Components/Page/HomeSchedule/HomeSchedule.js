@@ -1,7 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-const HomeSeduil = () => {
+
+const HomeSchedule = () => {
     const [camp, setCamp] = useState([]);
     useEffect(()=>{
         fetch('https://shielded-eyrie-93201.herokuapp.com/capming')
@@ -34,4 +35,4 @@ const HomeSeduil = () => {
         </div>
     );
 };
-export default HomeSeduil;
+export default HomeSchedule;

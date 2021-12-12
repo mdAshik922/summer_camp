@@ -6,7 +6,7 @@ const PrivetRoute = ({children, ...rest}) => {
     let location = useLocation();
     const { user,  isLoading } = useAuth();
     if (isLoading) { return <Spinner /> };
-    if(user.email){
+    if(user.email || user.displayName){
         return children;
     };
 

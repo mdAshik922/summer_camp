@@ -18,6 +18,8 @@ import PrivetRoute from './Components/PrivetRoute/PrivetRoute';
 import Manage from './Components/Manage/Manage';
 import Detail from './Components/Page/Detail';
 import Order from './Components/Page/Order/Order';
+import MakeAdmin from './Components/Page/MakeAdmin/MakeAdmin';
+import AdminRoute from './Components/AdminRoute/AdminRoute';
 
 function App() {
   return (
@@ -43,6 +45,8 @@ function App() {
 <Route  path="/manage" element={<PrivetRoute><Manage></Manage></PrivetRoute>}/>
 
 <Route  path="/order" element={<PrivetRoute><Order></Order></PrivetRoute>}/> 
+
+<Route  path="/makeAdmin" element={<AdminRoute><MakeAdmin></MakeAdmin></AdminRoute>}/> 
 
 <Route  path="/privacy" element={<TermPrivacy></TermPrivacy>} />
 

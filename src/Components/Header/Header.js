@@ -25,11 +25,11 @@ const Header = () => {
       <Nav.Link as={NavLink} to="/contact">Contact</Nav.Link>
  
      
-      { user.displayName?
+      {user.email || user.displayName ?
       
              <>
                    <Nav.Link as={NavLink} to="/order">Order</Nav.Link>
-      <Nav.Link as={NavLink} to="/manage#manage">Manage</Nav.Link>
+      <Nav.Link as={NavLink} to="/manage">Manage</Nav.Link>
               <button onClick={logout} style={{color: 'yellow', backgroundColor: 'green'}}>Log Out</button>
              </>
               
