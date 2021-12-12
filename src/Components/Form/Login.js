@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import './Login.css';
+import google from './Group 573.png';
 
 const Login = () => {
 const {singinWithGoogle, signInFacebook, setIsLoading, saveUser, setError} = useAuth();
@@ -29,12 +30,15 @@ const location = useLocation();
   };
 
     return (
-        <div style={{marginTop: "50vh"}}>
-            
-            <button onClick={handleGoogleLogin}><i className="fab fa-google"></i></button>
-            <button onClick={handleFacebookLogin}><i className="fab fa-facebook"></i></button>
+        <div>
+           <h2 style={{textAlign: "center", fontWeight: 'bolder', color: "cornflowerblue"}}>
+            Please Login Now</h2>
+          <div style={{marginTop: "50vh"}}>
+            <button style={{marginRight: "1px"}} onClick={handleGoogleLogin}><img width="25px" src={google} alt="google" />Google Sign-in</button>
+            <button style={{marginLeft: "1px"}} onClick={handleFacebookLogin}><img width="25px" src="https://i.ibb.co/PjZRkWt/facebook.png" alt=""/>Facebook Log-in</button>
        
             <p>Create a new account? <Link to="/register">Sign-up</Link>.</p>
+        </div>
         </div>
     );
 };

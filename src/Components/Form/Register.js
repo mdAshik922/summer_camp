@@ -35,10 +35,10 @@ const Register = () => {
             <h2 style={{textAlign: "center", fontWeight: 'bolder', color: "cornflowerblue"}}>Please Register Now  </h2>
             <div style={{marginTop: "50vh"}}>
           
-            <button style={{}} onClick={handleGoogleLogin}><img width="25px" src={google} alt="google" />Google sign-up</button>
-            <button style={{}} onClick={handleFacebookLogin}><img width="25px" src="https://i.ibb.co/PjZRkWt/facebook.png" alt=""/>Facebook sign-up</button>
+            <button style={{marginRight: "1px"}} onClick={handleGoogleLogin}><img width="25px" src={google} alt="google" />Google sign-up</button>
+            <button style={{marginLeft: "1px"}} onClick={handleFacebookLogin}><img width="25px" src="https://i.ibb.co/PjZRkWt/facebook.png" alt=""/>Facebook sign-up</button>
  
-<div className="container">
+<div >
     <p>Already have an account? <Link to="/login">Sign in</Link>.</p>
   </div>
             </div>
