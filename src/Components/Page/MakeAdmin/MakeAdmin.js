@@ -9,7 +9,7 @@ const MakeAdmin = () => {
 
     const onSubmit = (data) => {
         axios
-          .put("http:localhost:5000/users/admin", data)
+          .put("https://shielded-eyrie-93201.herokuapp.com/users/admin", data)
           .then((res) => {
             if (res?.data?.modifiedCount) {
               reset();
@@ -41,6 +41,7 @@ const MakeAdmin = () => {
             });
           });
       };
+      
     return (
         <section className="make-admin">
         <Form onSubmit={handleSubmit(onSubmit)}>
