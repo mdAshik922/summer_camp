@@ -30,15 +30,16 @@ const Register = () => {
         signInFacebook()
        
       };
+      
     return (
         <div>
             <h2 style={{textAlign: "center", fontWeight: 'bolder', color: "cornflowerblue"}}>Please Register Now  </h2>
-            <div style={{marginTop: "50vh"}}>
+            <div id="button" style={{marginTop: "40vh", marginLeft: "30%", width: "350px", height:"300px"}}>
           
-            <button style={{marginRight: "1px"}} onClick={handleGoogleLogin}><img width="25px" src={google} alt="google" />Google sign-up</button>
-            <button style={{marginLeft: "1px"}} onClick={handleFacebookLogin}><img width="25px" src="https://i.ibb.co/PjZRkWt/facebook.png" alt=""/>Facebook sign-up</button>
+            <button style={{marginRight: "1px", marginTop: "5%"}} onClick={handleGoogleLogin}><img width="25px" src={google} alt="google" />Google sign-up</button>
+            <button style={{marginLeft: "1px", marginTop: "5%"}} onClick={handleFacebookLogin}><img width="25px" src="https://i.ibb.co/PjZRkWt/facebook.png" alt=""/>Facebook sign-up</button>
  
-<div >
+<div style={{marginTop: "20%"}}>
     <p>Already have an account? <Link to="/login">Sign in</Link>.</p>
   </div>
             </div>
