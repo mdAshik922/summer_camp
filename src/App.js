@@ -32,13 +32,13 @@ function App() {
 
 <Route  path="/home" element={<Home></Home>}/>
 
-<Route  path="/about" element={<PrivetRoute><About></About></PrivetRoute>}/>
-
-<Route  path="/team" element={<PrivetRoute><Team></Team></PrivetRoute>}/>
-
 <Route  path="/schedule" element={<Schedule></Schedule>} />
 
 <Route  path="/gallery" element={<Gallery></Gallery>} />
+
+<Route  path="/about" element={<PrivetRoute><About></About></PrivetRoute>}/>
+
+<Route  path="/team" element={<PrivetRoute><Team></Team></PrivetRoute>}/>
 
 <Route  path="/contact" element={<PrivetRoute><Contact></Contact></PrivetRoute>}/>
 
@@ -48,13 +48,13 @@ function App() {
 
 <Route  path="/makeAdmin" element={<AdminRoute><MakeAdmin></MakeAdmin></AdminRoute>}/> 
 
-<Route  path="/privacy" element={<TermPrivacy></TermPrivacy>} />
-
 <Route  path="/detail/:id" element={<PrivetRoute><Detail></Detail></PrivetRoute>} />
 
-<Route  path="/login" element={<Login></Login>} />
+<Route  path="/privacy" element={<TermPrivacy></TermPrivacy>} />
 
 <Route  path="/register" element={<Register></Register>}/>
+
+<Route  path="/login" element={<Login></Login>} />
 
 <Route path="*" element={<NotFount></NotFount>}/>
 
