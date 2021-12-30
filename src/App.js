@@ -36,7 +36,7 @@ function App() {
 
 <Route  path="/gallery" element={<Gallery></Gallery>} />
 
-<Route  path="/bout" element={<PrivetRoute><About></About></PrivetRoute>}/>
+<Route  path="/about" element={<PrivetRoute><About></About></PrivetRoute>}/>
 
 <Route  path="/team" element={<PrivetRoute><Team></Team></PrivetRoute>}/>
 
