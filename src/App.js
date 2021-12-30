@@ -48,7 +48,7 @@ function App() {
 
 <Route  path="/makeAdmin" element={<AdminRoute><MakeAdmin></MakeAdmin></AdminRoute>}/> 
 
-<Route  path="/detail/:id" element={<PrivetRoute><Detail></Detail></PrivetRoute>} />
+<Route  path="/detal/:id" element={<PrivetRoute><Detail></Detail></PrivetRoute>} />
 
 <Route  path="/privacy" element={<TermPrivacy></TermPrivacy>} />
 
