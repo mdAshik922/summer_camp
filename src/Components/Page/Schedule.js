@@ -20,7 +20,7 @@ const Schedule = () => {
           <Spinner variant="danger" animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
-          <h6>Loading...</h6>
+         
         </div>
       ) : (
                 camp.map(camp => <div className="data" key={camp._id}>
