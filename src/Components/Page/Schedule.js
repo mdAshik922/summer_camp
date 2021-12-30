@@ -24,14 +24,14 @@ const Schedule = () => {
         </div>
       ) : (
                 camp.map(camp => <div className="data" key={camp._id}>
-               <img src={camp.picture} alt=""/>
+               <img style={{display: "block", marginLeft: "auto", marginRight: "auto"}} src={camp.picture} alt=""/>
                <h2> {camp.name}</h2>
                <h6>{camp.description.slice(40)}</h6>
 
               <Link to={`/detail/${camp._id}`}>
               <button
                style={{ backgroundColor: 'goldenrod',  color: 'whitesmoke',
-                borderRadius: '20px' , marginLeft: '30%'}}
+                borderRadius: '20px' }}
                >Details</button>
               </Link>
 
