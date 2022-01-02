@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Nav, Navbar } from 'react-bootstrap';
+import {  Nav, Navbar, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 import useAuth from '../../Hooks/useAuth';
@@ -11,8 +11,9 @@ const Header = () => {
     return (
         <div>
         <Navbar collapseOnSelect expand="lg" style={{backgroundColor: "#1abc9c"}}>
- 
-  <Navbar.Brand style={{color: "yellowgreen", fontSize: 'xx-large'}}> <img style={{width: '50px', marginLeft: '20px'}} src={header} alt="header-img"/> Camp</Navbar.Brand>
+        <Container>
+  <Navbar.Brand style={{color: "yellowgreen", fontSize: 'xx-large'}}>
+     <img style={{width: '50px', marginLeft: '20px'}} src={header} alt="header-img"/> Camp</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
 
@@ -49,8 +50,12 @@ const Header = () => {
       </Navbar.Text>
     </Nav>
   </Navbar.Collapse>
-  
+  </Container>
 </Navbar>
+
+
+
+
         </div>
     );
 };

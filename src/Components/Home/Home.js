@@ -15,19 +15,19 @@ const Home = () => {
         <div>
             <div><img width="50%" src={summer} alt="summer"/>
             
-          <Link to="/register"> <button style={{fontSize: '3rem',
-           fontWeight: 'bolder', maxWidth: '25%',
+            <Link to="/register"> <button style={{fontSize: '2rem',
+           fontWeight: 'bold', maxWidth: '25%',
            backgroundColor: 'tomato', borderRadius: '30px'}}
            >Join Now!</button>
            </Link>
             </div>
 
             <h1 className="summer" >Summer adventures for curious, creative kids</h1>
-            <p className="summer-somthing"><strong>Join whimsical, interactive classes for kids ages 5-15
+            <p><strong>Join whimsical, interactive classes for kids ages 5-15
                  in arts & crafts, theater, STEM, movement, theater, mindfulness and beyond</strong></p>
      
      <div >
-     <div  style={{marginRight: '40%'}}>
+     <div  style={{}}>
          
            <Fade left>  <h2 style={{fontWeight: 'bold', fontSize: '3rem',
             color: 'yellowgreen'}}>Summer Camp Programs</h2></Fade>
@@ -37,7 +37,7 @@ const Home = () => {
      <h6>will explore themes through hands-on projects and daily activities.</h6>
      <h6>Our all-day camp features healthy meals and snacks.</h6>
      <h6>Plus, campers receive a camp backpack, T-shirt, and baseball cap for summer adventures!</h6>
-     <div>  <img style={{marginLeft: '90%',  maxWidth:' 70%',  height: 'auto'}} src={boy} alt=""/></div>
+     <div>  <img style={{marginLeft: '0px', width: "100%"}} src={boy} alt=""/></div>
        </div>
      </div>
 <br/>
