@@ -16,7 +16,7 @@ const Home = () => {
             <div><img width="50%" src={summer} alt="summer"/>
             
             <Link to="/register"> <button style={{fontSize: "2rem",
-           fontWeight: "bold", maxWidth: '25%',
+           fontWeight: "bold", maxWidth: "25%",
            backgroundColor: "tomato", borderRadius: "30px"}}
            >Join Now!</button>
            </Link>
