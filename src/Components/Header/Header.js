@@ -43,7 +43,7 @@ const Header = () => {
       
        <div >
        <img style={{borderRadius: '50px', width: '35px'}} src={user.photoURL} alt=""/>
-        <p style={{marginRight: '5px', color: 'white'}}><strong>{user.displayName} </strong></p>
+        <p style={{marginRight: '', color: 'white'}}><strong>{user.displayName} </strong></p>
        </div>
       </Navbar.Text>
     </Nav>
