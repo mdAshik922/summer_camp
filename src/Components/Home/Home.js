@@ -1,6 +1,5 @@
 import React from 'react';
 import summer from './image/summer.jpg';
-import './Home.css';
 import { Link } from 'react-router-dom';
 import boy from './image/camp-boy.png';
 import Fade from 'react-reveal/Fade';
@@ -9,6 +8,7 @@ import secondOrder from './image/second-order (2).png';
 import thirdOrder from './image/third-order.png';
 import Activity from '../Page/Activity/Activity';
 import HomeSchedule from '../Page/HomeSchedule/HomeSchedule';
+
 const Home = () => {
 
     return (
