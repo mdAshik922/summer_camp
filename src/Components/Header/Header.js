@@ -9,9 +9,9 @@ const Header = () => {
 
     return (
         <div>
-        <Navbar collapseOnSelect expand="lg" style={{backgroundColor: "#1abc9c"}}>
-        <Container>
-  <Navbar.Brand style={{color: "yellowgreen", fontSize: 'xx-large'}}>
+        <Navbar collapseOnSelect expand="lg" >
+        <Container style={{backgroundColor: "rgb(178 214 60 / 84%)"}}>
+  <Navbar.Brand style={{ fontSize: 'xx-large'}}>
      <img style={{width: '50px', marginLeft: '20px'}} src={header} alt="header-img"/> Camp</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
