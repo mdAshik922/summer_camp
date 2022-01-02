@@ -27,7 +27,7 @@ const Home = () => {
                  in arts & crafts, theater, STEM, movement, theater, mindfulness and beyond</strong></p>
      
      <div >
-     <div  style={{}}>
+     <div>
          
            <Fade left>  <h2 style={{fontWeight: 'bold', fontSize: '3rem',
             color: 'yellowgreen'}}>Summer Camp Programs</h2></Fade>
