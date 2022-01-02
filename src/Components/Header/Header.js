@@ -1,7 +1,6 @@
 import React from 'react';
 import {  Nav, Navbar, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-
 import useAuth from '../../Hooks/useAuth';
 import header from './apple-touch-icon.png';
 
@@ -41,7 +40,6 @@ const Header = () => {
   
     <Nav>
     <Navbar.Text>
-      {/* show user photo and name */}
       
        <div >
        <img style={{borderRadius: '50px', width: '35px'}} src={user.photoURL} alt=""/>
