@@ -37,10 +37,8 @@ const Header = () => {
                <Nav.Link as={NavLink} style={{color: 'white'}} to="/login">Login</Nav.Link>
           }
     </Nav>
-  
     <Nav>
     <Navbar.Text>
-      
        <div >
        <img style={{borderRadius: '50px', width: '35px'}} src={user.photoURL} alt=""/>
         <p style={{marginRight: '5px', color: 'white'}}><strong>{user.displayName} </strong></p>
