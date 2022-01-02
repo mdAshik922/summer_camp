@@ -37,7 +37,7 @@ const Home = () => {
      <h6>will explore themes through hands-on projects and daily activities.</h6>
      <h6>Our all-day camp features healthy meals and snacks.</h6>
      <h6>Plus, campers receive a camp backpack, T-shirt, and baseball cap for summer adventures!</h6>
-     <div>  <img style={{ width: "100%"}} src={boy} alt=""/></div>
+     <div>  <img style={{ width: "100%"}} src={boy} alt="children"/></div>
        </div>
      </div>
 <br/>
