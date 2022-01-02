@@ -12,7 +12,7 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg">
         <Container style={{backgroundColor: "rgb(178 214 60 / 84%)"}}>
   <Navbar.Brand style={{ fontSize: 'xx-large'}}>
-     <img style={{width: '50px', marginLeft: '20px"}} src={header} alt="header-img"/> Camp</Navbar.Brand>
+     <img style={{width: '50px', marginLeft: "20px"}} src={header} alt="header-img"/> Camp</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
 
