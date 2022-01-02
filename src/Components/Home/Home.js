@@ -8,6 +8,7 @@ import secondOrder from './image/second-order (2).png';
 import thirdOrder from './image/third-order.png';
 import Activity from '../Page/Activity/Activity';
 import HomeSchedule from '../Page/HomeSchedule/HomeSchedule';
+import './Home.css';
 
 const Home = () => {
 
