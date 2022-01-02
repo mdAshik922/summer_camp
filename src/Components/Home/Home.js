@@ -29,7 +29,7 @@ const Home = () => {
      <div >
      <div>
          
-           <Fade left>  <h2 style={{fontWeight: 'bold', fontSize: '3rem',
+           <Fade left>  <h2 style={{fontWeight: 'bold', fontSize: "3rem",
             color: 'yellowgreen'}}>Summer Camp Programs</h2></Fade>
 
      <h6>Get ready for a whole summer packed with excitement,</h6>
